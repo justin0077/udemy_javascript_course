@@ -40,13 +40,31 @@ const description2 = `${country} is in ${continent} and it's ${population} peopl
 console.log(description2);
 
 // Javascript Fundamentels Part 1 Assignment 7 "Taking Decisions If / Else Statements"
+if (population > 33000000) {
+    console.log(`${country} 's is above average`)
+} else {
+    console.log(`${country} 's population is ${averagePopulation - population} million below average`)
+}
 
+// Javascript Fundamentels Part 1 Assignment 8 "Type Conversion And Coercion"
+console.log('9' - '5');
+console.log('19' - '13' + '17');
+console.log('19' - '13' + 17);
+console.log('123' < 57);
+console.log(5 + 6 + '4' + 9 - 4 - 2);
 
+// Javascript Fundamentels Part 1 Assignment 9 "Truthy & Falsy"
 
+// Javascript Fundamentels Part 1 Assignment 10 "Equality Operators: == vs ==="
+let numNeigbours = prompt('How many neighbour countries does your country have?');
 
-
-
-
+if (Number(numNeigbours) === 1) {
+    console.log('Only 1 border!');
+} else if (numNeigbours > 1) {
+    console.log('More than 1 border');
+} else {
+    console.log('No borders');
+}
 
 
 
