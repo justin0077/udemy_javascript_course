@@ -56,7 +56,9 @@ console.log(5 + 6 + '4' + 9 - 4 - 2);
 // Javascript Fundamentels Part 1 Assignment 9 "Truthy & Falsy"
 
 // Javascript Fundamentels Part 1 Assignment 10 "Equality Operators: == vs ==="
-let numNeigbours = prompt('How many neighbour countries does your country have?');
+/* const numNeighbours = prompt('How many neighbour countries does your country have?');
+
+const numNeigbours = Number(prompt('How many neighbour countries does your country have?'));
 
 if (Number(numNeigbours) === 1) {
     console.log('Only 1 border!');
@@ -64,10 +66,39 @@ if (Number(numNeigbours) === 1) {
     console.log('More than 1 border');
 } else {
     console.log('No borders');
+} */
+
+// Javascript Fundamentels Part 1 Assignment 11 "Logical Operators"
+if (language === 'english' && population < 50000000 && !isIsland) {
+    console.log(`You should live in ${country}`);
+} else {
+    console.log(`${country} does not meet your criteria`);
 }
 
+// Javascript Fundamentels Part 1 Assignment 12 "Swtich"
+switch (language) {
+    case 'chinese':
+    case 'manderin':
+        console.log('MOST number of native speakers!')
+        break;
+    case 'spanish':
+        console.log('2nd place in number of native speakers')
+        break;
+    case 'english':
+        console.log('3rd place')
+        break;
+    case 'hindi':
+        console.log('Number 4')
+        break;
+    case 'arabic':
+        console.log('5th most spoken language')
+        break;
+    default:
+        console.log('Great language too :D')
+}
 
-
+// Javascript Fundamentels Part 1 Assignment 13 "The Conditional (Ternary) Operator"
+console.log(`${country} is ${population > 33000000 ? 'above' : 'below'} average.`)
 
 
 // Javascript Fundamentels Part 1 Coding Challenge #1 
@@ -97,3 +128,38 @@ if (markHigherBMI) {
 } else {
     console.log(`John's BMI${BMIJohn} is higher than Mark's! ${BMIMark}`)
 }
+
+
+// Javascript Fundamentels Part 1 Coding Challenge #3
+
+/* const scoreDolphins = (96 + 108 + 89) / 3;
+// const scoreKoalas = (88 + 91 + 110) / 3;
+
+// if (scoreDolphins > scoreKoalas) {
+//     console.log('Dolphins win the trophy!');
+// } else if (scoreKoalas > scoreDolphins) {
+//     console.log('Koalas win the trophy!');
+// } else if (scoreDolphins === scoreKoalas) {
+//     console.log('Both win the trophy!');
+// } */
+
+// BONUS 1
+const scoreDolphins = (97 + 112 + 80) / 3;
+const scoreKoalas = (109 + 95 + 50) / 3;
+
+if (scoreDolphins > scoreKoalas && scoreDolphins >= 100) {
+    console.log('Dolphins win the trophy!');
+} else if (scoreKoalas > scoreDolphins && scoreKoalas >= 100) {
+    console.log('Koalas win the trophy!');
+} else if (scoreDolphins === scoreKoalas && scoreDolphins >= 100 && scoreKoalas >= 100) {
+    console.log('Both win the trophy!');
+} else {
+    console.log('No one wins the trophy!');
+}
+
+
+// Javascript Fundamentels Part 1 Coding Challenge #4
+const bill = 275;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
