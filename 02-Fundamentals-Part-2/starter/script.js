@@ -136,8 +136,45 @@ myCountry2.checkIsland();
 console.log(myCountry2);
 
 
+// Javascript Fundamentels Part 2 Assignment 10 "The For Loop"
+for (let voter = 1; voter <= 50; voter++) {
+    console.log(`Voter Number ${voter} is currently voting`);
+}
 
 
+// Javascript Fundamentels Part 2 Assignment 11 "The For Loop"
+const populations = [10, 1441, 332, 83];
+const percentages2 = [];
+for (let i = 0; i < populations.length; i++) {
+    const perc = percentageOfWorld1(populations[i]);
+    percentages2.push(perc);
+}
+console.log(percentages2);
+
+
+// Javascript Fundamentels Part 2 Assignment 12 "Looping backwards and Loops in Loops"
+const listOfNeighbours = [
+    ['Canada', 'Mexico'],
+    ['Spain'],
+    ['Norway', 'Sweden', 'Russia'],
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+    for (let y = 0; y < listOfNeighbours[i].length; y++) {
+        console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+    }
+}
+
+
+// Javascript Fundamentels Part 2 Assignment 12 "The While Loop"
+const percentage3 = [];
+let i = 0;
+while (i < populations.length) {
+    const perc = percentageOfWorld1(populations[i]);
+    percentage3.push(perc);
+    i++;
+}
+console.log(percentage3);
 
 
 // Javascript Fundamentels Part 2 Coding Challenge #1
@@ -185,9 +222,65 @@ console.log(bills, tips, totals);
 
 
 // Javascript Fundamentels Part 2 Coding Challenge #3
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+}
+
+mark.calcBMI();
+john.calcBMI();
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`);
+} else if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`);
+}
 
 
+// Javascript Fundamentels Part 2 Coding Challenge #4
+const calcTip2 = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
 
+const bills2 = [22, 295, 176, 440, 37, 105, 10, 1100];
+const tips2 = [];
+const totals2 = [];
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip2(bills2[i]);
+    tips2.push(tip);
+    totals2.push(tip + bills2[i]);
+}
+
+console.log(bills2, tips2, totals2);
+
+const calcAverage2 = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(calcAverage2[2, 3, 7]);
+console.log(calcAverage2(totals2));
+console.log(tips2);
 
 
 
